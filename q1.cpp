@@ -38,7 +38,7 @@ void loop() {
     // check if a CAN frame is received
     if (canController.readMessage(&rxFrame) == MCP2515::ERROR_OK) {
         // check if the received frame is of ID 0x420 and first data byte is 0x69
-        if (rxFrame.can_id == 0x123 && rxFrmae.data[0] == 0x98) {
+        if (rxFrame.can_id == 0x420 && rxFrame.data[0] == 0x69) {
             // turn on the LED to indicate activity
             /* todo 3 */
             digitalWrite(PIN_PB2, HIGH);
